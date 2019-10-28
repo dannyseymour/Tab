@@ -1,0 +1,12 @@
+<resources>
+  <string name="app_name">Tab</string>
+  <string name="navigation_drawer_open">Open navigation drawer</string>
+  <string name="navigation_drawer_close">Close navigation drawer</string>
+  <string name="nav_header_title">Android Studio</string>
+  <string name="nav_header_subtitle">android.studio@android.com</string>
+  <string name="nav_header_desc">Navigation header</string>
+  <string name="action_settings">Settings</string>
+  <string name="address"><![CDATA[415 &#189; Harvard Drive SE, Albuquerque NM 87106]]></string>
+  <string name="buy_button">Buy</string>
+  <string name="description">Uses banking history to assess interest on short-term, bill-payment financing.</string>
+</resources>
