@@ -87,7 +87,7 @@ public abstract class TabDatabase extends RoomDatabase {
     }
     @TypeConverter
     public String accountTypeToString(AccountType accountType){
-      return accountType.toString();
+      return (accountType != null) ? accountType.toString() : null;
     }
 
   }
