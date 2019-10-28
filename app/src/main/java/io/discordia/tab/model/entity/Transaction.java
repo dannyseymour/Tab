@@ -1,6 +1,6 @@
 package io.discordia.tab.model.entity;
 
-import android.accounts.Account;
+import io.discordia.tab.model.entity.Account;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
@@ -10,7 +10,7 @@ import java.util.Date;
 @Entity(
     foreignKeys = {
         @ForeignKey(
-            entity = User.class,
+            entity = PaymentOption.class,
             childColumns = "payment_option_id",
             parentColumns = "payment_option_id",
             onDelete = ForeignKey.CASCADE
@@ -25,7 +25,7 @@ import java.util.Date;
 )
 public class Transaction {
   @PrimaryKey(autoGenerate = true)
-  @ColumnInfo(name = "transaction")
+  @ColumnInfo(name = "transaction_id")
   private int id;
 
   @ColumnInfo(name="payment_option_id")

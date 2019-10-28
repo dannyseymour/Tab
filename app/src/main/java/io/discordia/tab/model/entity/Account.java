@@ -23,25 +23,26 @@ public class Account {
   @ColumnInfo(name = "account_id")
   private int id;
 
-  @ColumnInfo(name="user_profile_id")
+  @ColumnInfo(name = "user_profile_id")
   private int userProfileId;
 
-  @ColumnInfo(name="account_type")
-  private AccountType accountType;
+  @ColumnInfo(name = "account_type")
+  private String accountType;
 
-  @ColumnInfo(name="amount_due")
+  @ColumnInfo(name = "amount_due")
   private float amountDue;
 
-  @ColumnInfo(name="provider_name")
+  @NonNull
+  @ColumnInfo(name = "provider_name")
   private String providerName;
 
   @ColumnInfo(name = "date_due")
-  private Date dateDue= new Date();
+  private Date dateDue = new Date();
 
   @ColumnInfo(name = "date_opened")
-  private Date dateOpened= new Date();
+  private Date dateOpened = new Date();
 
-  @ColumnInfo(name="past_due_days")
+  @ColumnInfo(name = "past_due_days")
   private int pastDueDays;
 
   public int getId() {
@@ -101,10 +102,10 @@ public class Account {
   }
 
   public String getAccountType() {
-    return accountType.toString();
+    return accountType;
   }
 
-  public void setAccountType(AccountType accountType) {
+  public void setAccountType(String accountType) {
     this.accountType = accountType;
   }
 
@@ -118,13 +119,13 @@ public class Account {
     MORTGAGE,
     OTHER;
 
+/**
+ @Override public String toString() {
+ return AccountType.valueOf(this);
+ }
+ }
 
-    @Override
-    public String toString() {
-      return AccountType.valueOf(this);
-    }
+
+ */
   }
-
-
-
 }

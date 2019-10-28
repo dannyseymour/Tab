@@ -12,7 +12,7 @@ import java.util.List;
 @Dao
 public interface TransactionDao {
 
-    @Query("SELECT * FROM Transaction WHERE transaction_id = :transactionId")
+    @Query("SELECT * FROM `Transaction` WHERE transaction_id = :transactionId")
     LiveData<Transaction> getAllById(int transactionId);
 
 
@@ -26,5 +26,4 @@ public interface TransactionDao {
     int update(Transaction...transactions);
   }
 
-}
 

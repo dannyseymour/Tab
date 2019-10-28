@@ -17,10 +17,8 @@ public interface AccountDao {
   @Query("SELECT * FROM Account WHERE account_id= :accountId")
   LiveData<Account> getById(int accountId);
 
-  @Query("SELECT amount FROM Account WHERE account_id= :accountId")
+  @Query("SELECT amount_due FROM Account WHERE account_id= :accountId")
   int getAmountDueByAccount(int accountId);
-
-
 
   @Insert
   List<Long> insert(Collection<Account> accounts);

@@ -25,17 +25,17 @@ public class PaymentOption {
 
 
   @NonNull
-  @ColumnInfo(name="user_profile_id")
+  @ColumnInfo(name = "user_profile_id")
   private int userProfileId;
 
-  @ColumnInfo(name="last_four_digits")
+  @ColumnInfo(name = "last_four_digits")
   private int lastFourDigits;
 
   @ColumnInfo(name = "date_added")
   private Date dateAdded = new Date();
 
-  @ColumnInfo(name="account_type")
-  private AccountType accountType;
+  @ColumnInfo(name = "account_type")
+  private String accountType;
 
   public int getId() {
     return id;
@@ -70,10 +70,10 @@ public class PaymentOption {
   }
 
   public String getAccountType() {
-    return accountType.toString();
+    return accountType;
   }
 
-  public void setAccountType(AccountType accountType) {
+  public void setAccountType(String accountType) {
     this.accountType = accountType;
   }
 
@@ -84,13 +84,13 @@ public class PaymentOption {
     GOOGLE_PAY,
     OTHER;
 
+/**
+ @Override public String toString() {
+ return valueOf(this);
+ }
+ }
 
-    @Override
-    public String toString() {
-      return AccountType.valueOf(this);
-    }
+
+ */
   }
-
-
-
 }

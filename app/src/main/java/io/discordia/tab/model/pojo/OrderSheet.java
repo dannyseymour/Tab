@@ -1,5 +1,5 @@
 package io.discordia.tab.model.pojo;
-
+/**
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -70,3 +70,4 @@ public class OrderSheet {
     }
   }
 }
+*/

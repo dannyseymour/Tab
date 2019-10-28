@@ -10,7 +10,6 @@ import sqip.CardNonceBackgroundHandler;
 
 /**
  * Calls backend service and processes the nonce while the payment form is still open
- */
 public class CardEntryBackgroundHandler implements CardNonceBackgroundHandler {
   private final ChargeCall.Factory chargeCallFactory;
   private final Resources resources;
@@ -31,6 +30,7 @@ public class CardEntryBackgroundHandler implements CardNonceBackgroundHandler {
       return new CardEntryActivityCommand.ShowError(
      resources.getString(R.string.network_failutre));
     }*/
+/**
     if (!ConfigHelper.serverHostSet()){
       ConfigHelper.printCurlCommand(cardDetails.getNonce());
       return new CardEntryActivityCommand.Finish();
@@ -51,3 +51,4 @@ public class CardEntryBackgroundHandler implements CardNonceBackgroundHandler {
     this.resources= resources;
   }
 }
+*/

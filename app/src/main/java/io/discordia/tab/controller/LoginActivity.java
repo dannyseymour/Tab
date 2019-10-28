@@ -6,17 +6,16 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import edu.cnm.deepdive.blackjack.R;
-import edu.cnm.deepdive.blackjack.service.GoogleSignInService;
+import io.discordia.tab.R;
 import io.discordia.tab.service.GoogleSignInService;
 
 public class LoginActivity extends AppCompatActivity {
 
   private static final int LOGIN_REQUEST_CODE = 1000;
   private GoogleSignInService service;
+}
 
-
-  @Override
+ /** @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     service = GoogleSignInService.getInstance();
@@ -30,7 +29,8 @@ public class LoginActivity extends AppCompatActivity {
 
 
   }
-
+*/
+ /**
   @Override
   protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
     if(requestCode== LOGIN_REQUEST_CODE){
@@ -50,3 +50,4 @@ public class LoginActivity extends AppCompatActivity {
 
   }
 }
+*/

@@ -1,5 +1,5 @@
 package io.discordia.tab.service;
-
+/**
 import io.discordia.tab.BuildConfig;
 import io.reactivex.Single;
 import okhttp3.OkHttpClient;
@@ -14,26 +14,6 @@ import retrofit2.http.Query;
 
 public interface AccountService {
 
-  @GET("api/deck/new/shuffle/")
-  Single<Shoe> newShoe(@Query("deck_count") int count);
-
-  @GET("api/deck/{shoeKey}/draw/")
-  Single<Draw> draw(@Path("shoeKey")String shoeKey, @Query("count") int count); //TODO Specify type parameter
-
-  @GET("api/deck/{shoeKey}/shuffle/")
-  Single<Shoe> shuffle(@Path("shoeKey") String shoeKey);
-
-
-  static String getImageUrl(Card card){
-    String baseUrl = BuildConfig.BASE_URL;
-    String imagePattern = BuildConfig.STATIC_IMAGE_PATTERN;
-    String abbreviation = card.getAbbreviation();
-    return String.format(imagePattern, baseUrl, abbreviation);
-  }
-
-  static AccountService getInstance(){
-    return InstanceHolder.INSTANCE;
-  }
 
   class InstanceHolder{
 
@@ -56,3 +36,4 @@ public interface AccountService {
   }
 
 }
+*/

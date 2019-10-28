@@ -6,7 +6,7 @@ import io.discordia.tab.service.ConfigHelper;
 import retrofit2.Call;
 import sqip.GooglePay;
 import sqip.GooglePayNonceResult;
-
+/**
 public class GooglePayChargeClient {
   private final ChargeCall.Factory chargeCallFactory;
 
@@ -108,3 +108,4 @@ public class GooglePayChargeClient {
   }
 
 }
+*/

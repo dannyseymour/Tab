@@ -10,6 +10,7 @@ import io.discordia.tab.model.dao.AccountDao;
 import io.discordia.tab.model.dao.PaymentOptionDao;
 import io.discordia.tab.model.dao.TransactionDao;
 import io.discordia.tab.model.dao.UserDao;
+import io.discordia.tab.model.entity.Account.AccountType;
 import io.discordia.tab.model.entity.PaymentOption;
 import io.discordia.tab.model.entity.Account;
 import io.discordia.tab.model.entity.Transaction;
@@ -30,7 +31,7 @@ public abstract class TabDatabase extends RoomDatabase {
   private static Application applicationContext;
 
   public static void setApplicationContext(Application applicationContext) {
-    BlackjackDatabase.applicationContext = applicationContext;
+    TabDatabase.applicationContext = applicationContext;
   }
 
   public static TabDatabase getInstance() {
@@ -84,6 +85,11 @@ public abstract class TabDatabase extends RoomDatabase {
       }
       return returnVal;
     }
+    @TypeConverter
+    public String accountTypeToString(AccountType accountType){
+      return accountType.toString();
+    }
+
   }
 
 }

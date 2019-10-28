@@ -1,5 +1,5 @@
 package io.discordia.tab.service;
-
+/**
 import io.discordia.tab.BuildConfig;
 import io.discordia.tab.service.AccountService.InstanceHolder;
 import io.reactivex.Single;
@@ -15,26 +15,9 @@ import retrofit2.http.Query;
 
 public interface TransactionService {
 
-  @GET("api/deck/new/shuffle/")
-  Single<Shoe> newShoe(@Query("deck_count") int count);
-
-  @GET("api/deck/{shoeKey}/draw/")
-  Single<Draw> draw(@Path("shoeKey") String shoeKey,
-      @Query("count") int count); //TODO Specify type parameter
-
-  @GET("api/deck/{shoeKey}/shuffle/")
-  Single<Shoe> shuffle(@Path("shoeKey") String shoeKey);
-
-
-  static String getImageUrl(Card card) {
-    String baseUrl = BuildConfig.BASE_URL;
-    String imagePattern = BuildConfig.STATIC_IMAGE_PATTERN;
-    String abbreviation = card.getAbbreviation();
-    return String.format(imagePattern, baseUrl, abbreviation);
-  }
-
-  static io.discordia.tab.service.AccountService getInstance() {
-    return io.discordia.tab.service.AccountService.InstanceHolder.INSTANCE;
+/**
+  static io.discordia.tab.service.TransactionService getInstance() {
+    return io.discordia.tab.service.TransactionService.InstanceHolder.INSTANCE;
   }
 
   class InstanceHolder {
@@ -57,6 +40,6 @@ public interface TransactionService {
     }
 
   }
+*/
 
-}
 
